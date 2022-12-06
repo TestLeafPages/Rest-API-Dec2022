@@ -1,0 +1,96 @@
+Agenda - 04 December 2022
+---------------------------------------------------
+09:00 AM - 09:15 AM 	: Recap
+09:15 AM - 09:45 AM		: POST,PUT,PATCH and DELETE
+09:45 AM - 10:00 AM		: Adding logs to the script
+10:00 AM - 10:15 AM		: Traversing the Response
+10.15 AM - 10.30 AM     : Break
+10.30 AM - 11.00 AM     : Assertions
+11:00 AM - 11:30 AM     : Chaining
+11:30 AM - 12:00 PM     : Classroom Exercise
+12:00 PM - 12:15 PM     : Open Questions
+
+Recap
+	limtiations of postman
+		- data is limited to json and csv
+		- parallel execution is not possible
+		- single unified framework
+		- limited to javascript
+		- dependency injection
+		- CICD support
+		
+	REst Assured
+		- less coding
+		- inbuilt assertions
+		
+	what are the dependcies requried for REST API testing
+		- Rest Assured
+		- testng or cucumber
+		
+	five step process
+		- 1. requirements
+		  2. endpoint + resources
+		  3. construct the request
+		  4. send the request
+		  5. validation
+		
+	REst- assured
+		- baseUri                     - add the endpoint
+		  authentication      		  - basic
+		  REquestSpecification  input - RestAssured.given().
+		  object of Requestspecification - input.get(http methods)
+		  Response class  response - capture the response
+		  response.prettyprint()
+		
+
+				documentaion - rest api explorer
+	POST
+	
+		Classroom exercise
+		
+				- change_request - add the request and response logs
+					1- create a request with no body
+					2- create a request with body as string
+					3 - create a request with body as file
+					
+	    tranverse in the response
+				- json 
+					- get the response
+					- convert the response to json format(to traverse)
+					- traversal
+					- .jsonPath()
+							- get() - single value
+								get(result[0].number) - array indexing
+							- getList() - multiple values
+				- xml
+				
+		Assertions
+				-problem statement - incident servicenow
+					- verify the status code
+					- verify the incident number is present in the get request           - has item
+					- verify the post response incident number has the String "INC"		 - contains
+					- verify the get response incident number is equal to "INC0010030"   - equal to
+
+					hamcrest - inbuilt library
+					
+					
+		Rest Assured - Assignments - should have status code verifications
+		a) 1) Update any change_request with the below short description
+			"using put method for hemcrest" using the put method and ensure the update is successful
+			
+		2) update any change_request with the short description " using patch method for hamcrest"
+		using patch method and ensure that word hamcrest is present in the response and number is equal to 
+		""
+		
+		3) delete any change_request and verify the status line is equal to "HTTP/1.1 202 No content"
+		
+		
+		b) Chaining concept in jira - status code verifications
+					Create
+					edit
+					delete
+					get
+				
+					
+					
+		

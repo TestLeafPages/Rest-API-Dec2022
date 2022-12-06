@@ -1,0 +1,146 @@
+Agenda - 03rd December 2022
+----------------------
+09:00 AM - 09:15 AM 	: Recap
+09:15 AM - 09:45 AM		: what is Rest Assured 
+09:45 AM - 11:30 PM		: How to implement the HTTP Methods in Rest Assured
+11:30 PM - 12:00 PM		: Adding logs to the script
+12:00 PM - 12:15 PM     : Recap, Assignments and Questions
+
+Recap
+	1. merits of API Testing
+			- Easier and Isolated
+			- faster
+			- easy data generation
+			- less failures
+			
+			
+			
+	2. http methods
+			- Get
+			- Post
+			- put
+			- patch
+			- delete
+			
+	3. status codes
+			- 1xx - information
+			- 2xx - success
+			- 3xx - redirect
+			- 4xx - client side
+			- 5xx - server side
+			
+	4. Payload
+			- Endpoint - url + port (https://dev75350.service-now.com:9090)
+				if the application is hosted in 8080, then it can be ignored
+			- Resources
+				- /api/now/table
+				- /api/auth/oauth
+			- header
+			- cookies
+			- data (body)
+			
+			- amazon.com:9091/api/apparels/gender
+			- amazon.com:9091/api/electronics/mobile (query params - apple, samsung)
+			- amazon.com:9091/api/electronics/laptops
+			
+	5. variables
+			- global		- across all collections .
+			- environment	- different env - [QA,DEV,PRE-PROD,PROD,UAT]
+			- collection	- specific to the collection
+			- data			- json,csv
+			- local			- applies to only that request
+			
+	6. limitaitons of postman
+			- external data support is limited to json and csv
+			- semi automation tool , cannot be used for large scale automation
+			- parallel execution
+			- single unified framework
+			- limited to javascript
+			- dependency injection
+			
+		API Architecture
+			- SOAP
+			- Rest  - 60 to 70 %
+			- grapqhl - 10 to 20 % , social media backgroud
+			- gRPC  - streaming realted, netflix, amazon prime
+			
+	Rest-Assured - Java
+			- library or tool or API or dependency
+			- httpclient
+			- okhttp
+			- openhttp
+			- unirest
+			why Rest-assured
+				- less-coding
+				- designed especially for automation testers
+				- in built -assertions
+			- 3 conditions
+				- pre-conditions
+				- real tests
+				- verification
+			- cucumber style
+				- Given
+				- when
+				- Then
+				
+	Five step process
+			1. Requirements
+			2. Endpoint with resources
+			3. Construct the request
+			4. Send the request
+			5. Validate the response
+			
+			how to use rest assured
+				- maven
+					- build management tool
+					- works only for java
+					  - group id    - company name  (maruti suzuki)
+					  - artifact id - project name  (Swift, Swift desire, Alto)
+					  - version     - LXI,VXI
+					  
+					  
+		Classroom exercise
+					- create a maven project
+					- add the RestAssured and testng libraries
+					- make sure there are no errors
+					
+					
+					
+					contentType - when client sends the data to server on specific format
+					accept      - when client demands the server to send the response in specific format
+					
+					by deafult the response from the server is json format
+					
+					content type is mandatory for post 
+					
+					
+					classroom exercise
+					1)			- get all the records in change_request
+								- i should see the reponse in xml
+								- i should see only the number,category and sys_id
+								- i should see only the records related to hardware
+								
+					2) try the below
+							- post
+							- put
+							- patch
+							- delete
+							
+					debug
+						1) maven force snapshot update
+						2) RestAssured will not show as import - check the POM, if the dependecy has the scope tag
+								then 
+									1 - remove the scope tag (or)
+									2 - write your tests under src/test/java
+									3 - testng plugin
+											- go to market place and download the testng plugin
+									4 - install the other version of eclipse
+											- you can download the testng packaged version of eclipse 
+											
+								
+								additional assignment -  CRUD opeartions 
+									- create a issue in jira using rest assured
+									
+						
+			
+				
