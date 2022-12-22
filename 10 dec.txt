@@ -1,0 +1,174 @@
+Agenda - 10 December 2022
+---------------------------------------------------
+09:00 AM - 09:20 AM 	: Recap (preemptive, jira patch and static imports)
+09:20 AM - 10:30 AM		: Cucumber 
+10.30 AM - 10.45 AM     : Break
+10:45 AM - 11:00 AM     : Classroom Exercise
+11:00 AM - 12:00 PM     : Cucumber Continuation + Classroom Exercise
+12:00 PM - 12:15 PM     : Recap and Open Questions
+
+
+Recap
+	- why REST assured prefereed over postman
+		- in built assertion
+		- parallel execution
+		- multi language support
+		- dependency injection
+		- single unified framework
+		- easy integeration with reports
+		- Better CICD Support
+		- external data support (almost everything)
+	- difference between API and Webservice
+		- all webservices are API
+		- but not all APIs are webservices
+		
+			webservices - when two applications communicate with each other via internet 
+			API         - when two application interact with each other even with or without the internet
+	- request specification
+		- construct the request		
+			- query params
+				
+	- content type and accept
+		 content type - when you send data to the server
+		 accept       - when you say the required format from server
+		 
+	GET  - nothing is mandatory
+	POST - content type is mandatory
+	
+	traversal
+			- entire sys_id - response->jsonpath()-getList()
+			- single sys_id - response->jsonpath()-get("city")
+			
+			{
+				"name":"TEst",
+				"city":"Chennai"
+			},
+			{
+				"name":"TEst123",
+				"city":"Bangalore"
+			},
+			{
+				details: {
+						"Age":"30"
+						"Hobbies":"Music"
+				}
+			}
+			
+	assertions
+		- common assertions
+			- status code
+		- rest assured
+			- hasItem
+			- equalTO
+			- contains
+			
+	PreEmptive and NonPreEmptive
+	
+	Non Premeptive
+		1. user makes a request to the jira.com
+		2. client makes a request without authentication to the server
+		3. server will response back with 401 asking for the creds
+		4. client will make an another request with creds
+		5. server accepts the connection
+		
+		- better security
+		
+	PreEmptive
+		1. client makes a request to the user with creds
+		2. connection established
+		
+			
+	Jira Patch
+		- does not have patch
+		
+
+Cucumber 
+	- waterfall approach
+	- Agile
+		- scrum
+		- kanban
+		- extreme programming
+	- birth of TDD
+		- test, code and refactor
+		- modularity
+		- reuse
+		- testng - TDD
+		- collaboration
+	- birth of BDD
+		- consistennt vocabulary
+		- elimniate ambugity
+		- eliminate miscommunication
+		- human readable - gherkin
+		- behaviour
+			testng - search()
+			bdd    - searchByFirstName()
+			
+	BDD
+		- java   - cucumber
+		- C#     - specFlow
+		- python - behave
+		
+		
+	Cucumber
+			- dependencies maven
+					- cucumber-java
+					- cucumber-testng - works as runner
+			- eclipse or intellij plugins - cucumber or natural
+	
+	Keywords
+			- given - precondition
+			- when  - actual happening
+			- then  - after an action
+			- and   - chaining
+			- but   - negative
+	Folder structure
+			- features
+					all the feature files
+			- Runner
+					- CLI
+					- Junit
+					- testngNG
+			- stepDefinition
+					step definitions
+			- 
+			
+			
+			classromm session
+				- setup the dependencies for cucumber
+				- create three packages 
+						- features
+						- step definitions
+						- runner
+				- create a simple feature file for get request servicenow
+				- add the corresponsing step definitions
+				- start the execution from runner file
+				<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.3.4</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.3.4</version>
+</dependency>
+  	<dependency>
+  		<groupId>io.rest-assured</groupId>
+  		<artifactId>rest-assured</artifactId>
+  		<version>5.3.0</version>
+  	</dependency>
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.1.0</version>
+</dependency>
+
+
+
+
+
+		
+		
+		

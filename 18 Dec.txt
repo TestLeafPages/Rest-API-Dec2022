@@ -1,0 +1,126 @@
+Agenda - 18 December 2022
+----------------------
+09:00 AM - 09:20 AM 	: Recap
+09:20 AM - 10:45 AM		: Makaia Framework (Overview + Code Explanation + Execution)
+10:45 AM - 11:00 AM		: Break
+11:00 AM - 12:00 PM		: Practice session on Makaia with ServiceNow
+12:00 PM - 12:15 PM		: Recap and Assignments
+
+Recap
+	- how do you get a value from a response
+		- capture the response and store it in object
+		- convert that to the json(or) xml (jsonpath)
+		- traverse (get or getList)
+	- what kind of assertions tou have used
+		- status code
+		- status line
+		- response time
+		- equalsTO
+		- contains
+		- hasItem
+	- log the rest assured
+		- log.all()
+	- log only for failures
+		- programmatically handle
+		- log.fail()
+	- cucumber
+		- features
+		- steps
+		- runner
+			- testng
+			- junit
+			- CLI
+		- scenario outline - 
+			- how do you achieve data parametereziaiton
+				- testng - data providers
+				- cucumber - scenario outline
+			- examples - kind of replaces the excel
+			-  datatable- help us to use the multiple values for a step
+			- background - pre condition - across scenarios - Endpoint + auth
+			- hooks      - pre condition - across feature files - reporting(precondition)cleanup (post condition)
+			- tag        - grouping
+			
+		- framework
+			- simplifies your task
+			- resusablity
+			- maintanenece
+			
+			-testng - TDD
+			-cucumber - BDD
+			-matchie - custom
+				- rest api
+				- allure 
+			-makaia - custom
+			- objective - single unified framework
+			- components - Selenium + Rest Assured + Testng + Cucumber + Extent Reports
+			- maven project - dependencies
+			- test data - excel file,csv or json or database
+
+		    - static analysis
+				first starting point of any project is POM - Java
+					
+			dependencies
+				- webdrivermanager        -  remove the browser driver dependency
+				- selenium-java			  -  UI Testing
+				- rest-assured            -  api tetsing
+				- testng                  - TDD
+				- cucumber-java           - BDD
+				- cucumber-testng		  - acts as a cucumber runner
+				- json-smart 	          - something related to json 
+				- poi					  - Excel read/write
+                - extentreports			  - reporting
+                - commons-io              - something related to iinput / output
+			plugins
+				- maven-compiler-plugin   - compiles
+				- maven-surefire-plugin   - control of the test execution
+				
+			folder strucuture
+				- feature
+					- all features files
+				- lib
+					-listeners
+						- extentreports
+							- listener related to reports
+						- testng
+							- listens to the testng related things
+						- webdriver
+						    - take care of UI related operations
+					-rest
+						- pre and post - starting and closing the reports
+						- rest assureed base - base class for the wrapper methods in rest assured
+					-selenium
+						- similar to rest 
+					-utils
+						- data provider - already method available to read data from excel
+						- htmlreporter - report related code - extent report
+				- pages
+					- rest	
+						- step defintions
+					- selenium
+						- Page Object Model
+				- runner
+					- used for the execution by cucumber
+				- tests
+					- rest
+						
+					- selenium
+					
+				testng annoation mapping
+				
+				@before suite			- start report
+				@before Test			- setting the values
+				@before class			- starting test case
+				@before Method			- assigning the values
+				@Test					- business logic
+				@after method			- NA
+				@after class            - NA
+				@after Test				- NA
+				@after suite			- end the report
+				
+				
+				24 - project day 
+				25 - swagger and wiremock
+				31 - graphql,oauth , schema validation 
+						
+				
+			
